@@ -5,7 +5,7 @@ const client = SanityClient({
   projectId: 'cxolgfew',
   dataset: 'production',
   useCdn: true,
-  // apiVersion: '',
+  apiVersion: '2021-10-21',
 });
 
 const builder = imageUrlBuilder(client);
