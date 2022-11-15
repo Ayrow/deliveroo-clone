@@ -1,6 +1,12 @@
 import React, { useLayoutEffect } from 'react';
-import { View, Text, Image, TextInput, ScrollView } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {
+  View,
+  Text,
+  Image,
+  TextInput,
+  ScrollView,
+  SafeAreaView,
+} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {
   ChevronDownIcon,
