@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -80,22 +80,16 @@ const HomeScreen = () => {
         </View>
 
         <ScrollView className='bg-gray-100'>
+          {featuredCategories?.map((category) => (
+            <FeaturedRow
+              key={category._id}
+              id={category._id}
+              title={category.name}
+              description={category.short_description}
+            />
+          ))}
+
           <Categories />
-          <FeaturedRow
-            id='Testing 1'
-            title='Featured'
-            description='Paid placements from our partners'
-          />
-          <FeaturedRow
-            id='Testing 2'
-            title='Tasty Discounts'
-            description="Everyone's been enjoying theses juicy discounts"
-          />
-          <FeaturedRow
-            id='Testing 3'
-            title='Offers near you!'
-            description='Why not support your local restaurant tonight!'
-          />
         </ScrollView>
       </View>
     </SafeAreaView>
