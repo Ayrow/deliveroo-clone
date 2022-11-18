@@ -14,6 +14,11 @@ const DishRow = ({ id, name, description, price, image }) => {
     dispatch(addToBasket({ id, name, description, price, image }));
   };
 
+  const removeItemFromBasket = () => {
+    if (!items.length > 0) return;
+    dispatch(removeItemFromBasket({ id }));
+  };
+
   return (
     <>
       <TouchableOpacity
@@ -41,7 +46,7 @@ const DishRow = ({ id, name, description, price, image }) => {
       {isPressed && (
         <View>
           <View className='flex-row items-center space-x-2'>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={removeItemFromBasket}>
               <MinusCircleIcon
                 // color={items.length > 0 ? '#00CCBB' : 'gray'}
                 size={40}
