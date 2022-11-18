@@ -40,8 +40,8 @@ const RestaurantScreen = () => {
   return (
     <>
       <BasketIcon />
-      <ScrollView className='relative'>
-        <View>
+      <ScrollView>
+        <View className='relative'>
           <Image
             source={{ uri: urlFor(imgUrl).url() }}
             className='w-full h-56 bg-gray-300 p-4'
@@ -86,7 +86,7 @@ const RestaurantScreen = () => {
             <ChevronRightIcon color='#00CCBB' />
           </TouchableOpacity>
 
-          <View>
+          <View className='pb-36'>
             <Text className='px-4 pt-6 mb-3 font-bold text-xl'>Menu</Text>
 
             {dishes.map((dish) => {
